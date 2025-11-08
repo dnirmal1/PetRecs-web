@@ -1713,7 +1713,7 @@ section.hero.hero--animated {
 }
 
 .paw-track--front-left {
-  --trail-duration: 11s;
+  --trail-duration: 8s;
   --trail-delay: 0s;
   --step-duration: 0.92s;
   --step-delay: 0s;
@@ -1730,13 +1730,14 @@ section.hero.hero--animated {
   --swing-tilt: 7deg;
   --tilt-offset: 14deg;
   --image-filter: grayscale(1) brightness(0.78) contrast(1.14);
+  --motion-path: path('M -250 700 C -50 580, 200 480, 500 380 S 900 200, 1200 50');
 }
 
 .paw-track--back-right {
-  --trail-duration: 12.1s;
-  --trail-delay: 0.58s;
+  --trail-duration: 8s;
+  --trail-delay: 2s;
   --step-duration: 1.08s;
-  --step-delay: 0.46s;
+  --step-delay: 1.6s;
   --shadow-duration: 0.98s;
   --imprint-duration: 1.42s;
   --size-scale: 0.9;
@@ -1750,13 +1751,14 @@ section.hero.hero--animated {
   --swing-tilt: 5deg;
   --tilt-offset: 12deg;
   --image-filter: grayscale(1) brightness(0.86) contrast(1.06);
+  --motion-path: path('M 1400 800 C 1200 650, 1000 550, 800 450 S 500 300, 200 150');
 }
 
 .paw-track--front-right {
-  --trail-duration: 11.6s;
-  --trail-delay: 1.18s;
+  --trail-duration: 8s;
+  --trail-delay: 4s;
   --step-duration: 0.96s;
-  --step-delay: 0.92s;
+  --step-delay: 3.2s;
   --shadow-duration: 0.9s;
   --imprint-duration: 1.34s;
   --size-scale: 0.92;
@@ -1770,13 +1772,14 @@ section.hero.hero--animated {
   --swing-tilt: 6deg;
   --tilt-offset: 13deg;
   --image-filter: grayscale(1) brightness(0.82) contrast(1.1);
+  --motion-path: path('M -300 600 C 0 500, 300 400, 600 300 S 1000 150, 1300 -50');
 }
 
 .paw-track--back-left {
-  --trail-duration: 12.4s;
-  --trail-delay: 1.78s;
+  --trail-duration: 8s;
+  --trail-delay: 6s;
   --step-duration: 1.14s;
-  --step-delay: 1.38s;
+  --step-delay: 4.8s;
   --shadow-duration: 1.02s;
   --imprint-duration: 1.48s;
   --size-scale: 0.94;
@@ -1790,6 +1793,91 @@ section.hero.hero--animated {
   --swing-tilt: 4deg;
   --tilt-offset: 12deg;
   --image-filter: grayscale(1) brightness(0.8) contrast(1.15);
+  --motion-path: path('M 1500 750 C 1300 600, 1100 500, 900 400 S 600 250, 300 100');
+}
+
+.paw-track--extra-1 {
+  --trail-duration: 8s;
+  --trail-delay: 1s;
+  --step-duration: 0.88s;
+  --step-delay: 0.8s;
+  --shadow-duration: 0.84s;
+  --imprint-duration: 1.24s;
+  --size-scale: 1.02;
+  --scale-ground: 1.04;
+  --scale-lift: 1.16;
+  --scale-mid: 1.08;
+  --scale-soft: 1.02;
+  --scale-touch: 1.06;
+  --rotate: -18deg;
+  --lift-height: 22px;
+  --swing-tilt: 8deg;
+  --tilt-offset: 15deg;
+  --image-filter: grayscale(1) brightness(0.76) contrast(1.18);
+  --motion-path: path('M -200 800 C 100 680, 400 580, 700 480 S 1100 320, 1400 150');
+}
+
+.paw-track--extra-2 {
+  --trail-duration: 8s;
+  --trail-delay: 3s;
+  --step-duration: 1.18s;
+  --step-delay: 2.4s;
+  --shadow-duration: 1.08s;
+  --imprint-duration: 1.52s;
+  --size-scale: 0.88;
+  --scale-ground: 0.92;
+  --scale-lift: 1.04;
+  --scale-mid: 0.97;
+  --scale-soft: 0.92;
+  --scale-touch: 0.96;
+  --rotate: 11deg;
+  --lift-height: 14px;
+  --swing-tilt: 4deg;
+  --tilt-offset: 11deg;
+  --image-filter: grayscale(1) brightness(0.88) contrast(1.04);
+  --motion-path: path('M 1600 700 C 1400 550, 1200 450, 1000 350 S 700 200, 400 50');
+}
+
+.paw-track--extra-3 {
+  --trail-duration: 8s;
+  --trail-delay: 5s;
+  --step-duration: 0.94s;
+  --step-delay: 4s;
+  --shadow-duration: 0.88s;
+  --imprint-duration: 1.32s;
+  --size-scale: 0.96;
+  --scale-ground: 1.0;
+  --scale-lift: 1.12;
+  --scale-mid: 1.05;
+  --scale-soft: 0.99;
+  --scale-touch: 1.03;
+  --rotate: 15deg;
+  --lift-height: 19px;
+  --swing-tilt: 7deg;
+  --tilt-offset: 14deg;
+  --image-filter: grayscale(1) brightness(0.81) contrast(1.12);
+  --motion-path: path('M -350 650 C -100 550, 200 450, 500 350 S 900 200, 1200 0');
+}
+
+.paw-track--extra-4 {
+  --trail-duration: 8s;
+  --trail-delay: 7s;
+  --step-duration: 1.12s;
+  --step-delay: 5.6s;
+  --shadow-duration: 1.04s;
+  --imprint-duration: 1.46s;
+  --size-scale: 0.93;
+  --scale-ground: 0.95;
+  --scale-lift: 1.09;
+  --scale-mid: 1.0;
+  --scale-soft: 0.96;
+  --scale-touch: 0.99;
+  --rotate: -13deg;
+  --lift-height: 16px;
+  --swing-tilt: 5deg;
+  --tilt-offset: 13deg;
+  --image-filter: grayscale(1) brightness(0.79) contrast(1.16);
+  --motion-path: path('M 1700 600 C 1500 450, 1300 350, 1100 250 S 800 100, 500 -50');
 }
 
 @keyframes pawGlide {
