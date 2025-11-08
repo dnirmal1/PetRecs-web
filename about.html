@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About PetRecs - Leading Pet Healthcare CRM platform connecting veterinary clinics and pet parents through innovative technology. Learn our story, mission, and commitment to transforming pet healthcare.">
+  <title>About PetRecs - Leading Pet Healthcare Technology Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="paw.png">
+  <style>
+    /* About Page Specific Styles */
+    .about-page {
+      background: #ffffff;
+    }
+
+    /* About Hero Section */
+    .about-hero {
+      background: linear-gradient(135deg, #f8fbfe 0%, #f0f7fc 100%);
+      padding: clamp(40px, 6vw, 60px) 0 clamp(60px, 10vw, 100px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(11, 116, 209, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .about-hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Animated Walking Paw Prints */
+    .about-hero-paws {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .about-paw {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .about-paw svg {
+      width: 100%;
+      height: 100%;
+      fill: rgba(11, 116, 209, 0.12);
+    }
+
+    /* Individual paw animations with staggered delays and positions */
+    .about-paw-1 {
+      bottom: 15%;
+      animation: pawWalk1 12s ease-in-out infinite;
+    }
+
+    .about-paw-2 {
+      bottom: 35%;
+      animation: pawWalk2 14s ease-in-out infinite;
+      animation-delay: 1.5s;
+    }
+
+    .about-paw-3 {
+      bottom: 55%;
+      animation: pawWalk3 13s ease-in-out infinite;
+      animation-delay: 3s;
+    }
+
+    .about-paw-4 {
+      bottom: 25%;
+      animation: pawWalk4 15s ease-in-out infinite;
+      animation-delay: 4.5s;
+    }
+
+    .about-paw-5 {
+      bottom: 45%;
+      animation: pawWalk5 13.5s ease-in-out infinite;
+      animation-delay: 6s;
+    }
+
+    .about-paw-6 {
+      bottom: 65%;
+      animation: pawWalk6 14.5s ease-in-out infinite;
+      animation-delay: 7.5s;
+    }
+
+    .about-paw-7 {
+      bottom: 20%;
+      animation: pawWalk7 12.5s ease-in-out infinite;
+      animation-delay: 9s;
+    }
+
+    .about-paw-8 {
+      bottom: 50%;
+      animation: pawWalk8 13s ease-in-out infinite;
+      animation-delay: 10.5s;
+    }
+
+    /* Paw walking animations - each paw walks from left to right */
+    @keyframes pawWalk1 {
+      0% { left: -10%; opacity: 0; transform: rotate(-15deg); }
+      10% { opacity: 0.12; }
+      50% { opacity: 0.12; }
+      90% { opacity: 0; }
+      100% { left: 110%; opacity: 0; transform: rotate(15deg); }
+    }
+
+    @keyframes pawWalk2 {
+      0% { left: -10%; opacity: 0; transform: rotate(10deg); }
+      10% { opacity: 0.1; }
+      50% { opacity: 0.1; }
+      90% { opacity: 0; }
+      100% { left: 110%; opacity: 0; transform: rotate(-10deg); }
+    }
+
+    @keyframes pawWalk3 {
+      0% { left: -10%; opacity: 0; transform: rotate(-20deg); }
+      10% { opacity: 0.13; }
+      50% { opacity: 0.13; }
+      90% { opacity: 0; }
+      100% { left: 110%; opacity: 0; transform: rotate(20deg); }
+    }
+
+    @keyframes pawWalk4 {
+      0% { left: -10%; opacity: 0; transform: rotate(5deg); }
+      10% { opacity: 0.11; }
+      50% { opacity: 0.11; }
+      90% { opacity: 0; }
+      100% { left: 110%; opacity: 0; transform: rotate(-5deg); }
+    }
+
+    @keyframes pawWalk5 {
+      0% { left: -10%; opacity: 0; transform: rotate(-10deg); }
+      10% { opacity: 0.12; }
+      50% { opacity: 0.12; }
+      90% { opacity: 0; }
+      100% { left: 110%; opacity: 0; transform: rotate(10deg); }
+    }
+
+    @keyframes pawWalk6 {
+      0% { left: -10%; opacity: 0; transform: rotate(15deg); }
+      10% { opacity: 0.1; }
+      50% { opacity: 0.1; }
+      90% { opacity: 0; }
+      100% { left: 110%; opacity: 0; transform: rotate(-15deg); }
+    }
+
+    @keyframes pawWalk7 {
+      0% { left: -10%; opacity: 0; transform: rotate(-8deg); }
+      10% { opacity: 0.13; }
+      50% { opacity: 0.13; }
+      90% { opacity: 0; }
+      100% { left: 110%; opacity: 0; transform: rotate(8deg); }
+    }
+
+    @keyframes pawWalk8 {
+      0% { left: -10%; opacity: 0; transform: rotate(12deg); }
+      10% { opacity: 0.11; }
+      50% { opacity: 0.11; }
+      90% { opacity: 0; }
+      100% { left: 110%; opacity: 0; transform: rotate(-12deg); }
+    }
+
+    .about-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      background: transparent;
+      border-radius: 0;
+      border: none;
+      margin-bottom: 36px;
+      animation: fadeInUp 0.6s ease;
+    }
+
+    .about-hero-logo {
+      height: 200px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 16px rgba(11, 116, 209, 0.18));
+      transition: transform 0.3s ease;
+    }
+
+    .about-hero-logo:hover {
+      transform: scale(1.05);
+    }
+
+    .about-hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 0 0 24px 0;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .about-hero-tagline {
+      font-size: clamp(1.125rem, 2vw, 1.375rem);
+      color: var(--text-medium);
+      line-height: 1.6;
+      margin: 0 0 32px 0;
+      animation: fadeInUp 1s ease;
+    }
+
+    .about-hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .about-hero-stat {
+      text-align: center;
+    }
+
+    .about-hero-stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    .about-hero-stat-label {
+      font-size: 0.938rem;
+      color: var(--text-medium);
+      font-weight: 600;
+    }
+
+    /* Mission Section */
+    .about-mission {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: white;
+    }
+
+    .about-mission-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .about-mission h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 0 0 24px 0;
+      line-height: 1.2;
+    }
+
+    .about-mission-text {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: var(--text-medium);
+      margin: 0 0 24px 0;
+    }
+
+    /* Dual Platform Section */
+    .about-platform {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: linear-gradient(135deg, #f8fbfe 0%, #f0f7fc 100%);
+    }
+
+    .about-platform h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 0 0 48px 0;
+      text-align: center;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .platform-card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      border: 2px solid #e0edf7;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .platform-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(11, 116, 209, 0.15);
+      border-color: var(--primary);
+    }
+
+    .platform-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .platform-icon svg {
+      color: white;
+    }
+
+    .platform-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 16px 0;
+    }
+
+    .platform-card p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-medium);
+      margin: 0 0 24px 0;
+    }
+
+    .platform-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .platform-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      font-size: 0.938rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+    }
+
+    .platform-features li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, var(--accent) 0%, #02a865 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* Story Section */
+    .about-story {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: white;
+    }
+
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-story-content h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 0 0 24px 0;
+      line-height: 1.2;
+    }
+
+    .about-story-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-medium);
+      margin: 0 0 20px 0;
+    }
+
+    .about-story-image {
+      background: linear-gradient(135deg, #e8f4fd 0%, #f0fcf5 100%);
+      border-radius: 24px;
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+      border: 2px solid #d8eaf6;
+    }
+
+    .story-visual {
+      text-align: center;
+    }
+
+    .story-visual-icon {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .story-visual-icon svg {
+      color: white;
+      width: 64px;
+      height: 64px;
+    }
+
+    .story-visual-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+
+    /* Team Section */
+    .about-team {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: linear-gradient(135deg, #f8fbfe 0%, #f0f7fc 100%);
+    }
+
+    .about-team h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 0 0 16px 0;
+      text-align: center;
+    }
+
+    .about-team-intro {
+      max-width: 700px;
+      margin: 0 auto 48px;
+      text-align: center;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--text-medium);
+    }
+
+    .team-values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .team-value {
+      background: white;
+      padding: 32px;
+      border-radius: 16px;
+      border: 2px solid #e0edf7;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .team-value:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(11, 116, 209, 0.12);
+    }
+
+    .team-value-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .team-value-icon svg {
+      color: white;
+    }
+
+    .team-value h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 12px 0;
+    }
+
+    .team-value p {
+      font-size: 0.938rem;
+      line-height: 1.6;
+      color: var(--text-medium);
+      margin: 0;
+    }
+
+    /* Technology Section */
+    .about-technology {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: white;
+    }
+
+    .about-technology h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 0 0 48px 0;
+      text-align: center;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .tech-item {
+      padding: 32px;
+      background: #f8fbfe;
+      border-radius: 16px;
+      border-left: 4px solid var(--accent);
+      transition: all 0.3s ease;
+    }
+
+    .tech-item:hover {
+      background: #f0f7fc;
+      transform: translateX(8px);
+      box-shadow: 0 8px 24px rgba(3, 199, 122, 0.12);
+    }
+
+    .tech-item h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tech-item h3 svg {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .tech-item p {
+      font-size: 0.938rem;
+      line-height: 1.7;
+      color: var(--text-medium);
+      margin: 0;
+    }
+
+    /* Testimonials Section */
+    .about-testimonials {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: linear-gradient(135deg, #f8fbfe 0%, #f0f7fc 100%);
+    }
+
+    .about-testimonials h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 0 0 48px 0;
+      text-align: center;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      border: 2px solid #e0edf7;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+    }
+
+    .testimonial-quote-icon {
+      color: var(--primary);
+      opacity: 0.2;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-medium);
+      font-style: italic;
+      margin: 0 0 24px 0;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .testimonial-avatar {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .testimonial-author-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .testimonial-author-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .testimonial-author-title {
+      font-size: 0.875rem;
+      color: var(--text-medium);
+    }
+
+    /* CTA Section */
+    .about-cta {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: linear-gradient(135deg, var(--primary) 0%, #0b5ea8 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .about-cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-cta h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: white;
+      margin: 0 0 20px 0;
+      line-height: 1.2;
+    }
+
+    .about-cta p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 0 36px 0;
+    }
+
+    .about-cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 40px;
+      background: white;
+      color: var(--primary);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.125rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-cta-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+      background: #f8fbfe;
+    }
+
+    .btn-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 18px 40px;
+      background: transparent;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border: 2px solid white;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-cta-secondary:hover {
+      background: white;
+      color: var(--primary);
+      transform: translateX(4px);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .about-story-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-hero {
+        padding: 60px 0 50px;
+      }
+
+      .about-hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .about-hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .platform-grid,
+      .tech-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-values {
+        grid-template-columns: 1fr;
+      }
+
+      .about-cta-buttons {
+        flex-direction: column;
+      }
+
+      .btn-cta-primary,
+      .btn-cta-secondary {
+        width: 100%;
+      }
+
+      .about-hero-logo {
+        height: 140px;
+      }
+
+      .about-hero {
+        padding: 32px 0 50px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .platform-card {
+        padding: 28px;
+      }
+
+      .tech-item {
+        padding: 24px;
+      }
+
+      .testimonial-card {
+        padding: 24px;
+      }
+
+      .about-hero-logo {
+        height: 110px;
+      }
+
+      .about-hero {
+        padding: 24px 0 40px;
+      }
+    }
+  </style>
+</head>
+<body class="about-page">
+  
+  <!-- Navigation -->
+  <header class="site-header-modern">
+    <nav class="nav-modern container" role="navigation" aria-label="Main navigation">
+      <a class="brand-modern" href="index.html">
+        <img src="brandLogo.png" alt="PetRecs Logo" class="brand-logo-modern">
+      </a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      
+      <ul class="nav-links-modern" id="navMenu">
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="index.html#benefits">Benefits</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <!-- Animated Walking Paw Prints -->
+      <div class="about-hero-paws" aria-hidden="true">
+        <div class="about-paw about-paw-1">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M86 5c-17 0-31 17-31 38s14 38 31 38 31-17 31-38S103 5 86 5zm69 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zM37 85c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm182 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm-81 25c-26 0-56 11-74 29-19 19-28 43-22 67 6 23 27 41 53 43 11 1 22 0 33-3 21-6 40-18 57-35s29-36 35-57c3-11 4-22 3-33-2-26-20-47-43-53-5-1-10-2-15-2-9 0-18 2-27 6z"/>
+          </svg>
+        </div>
+        <div class="about-paw about-paw-2">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M86 5c-17 0-31 17-31 38s14 38 31 38 31-17 31-38S103 5 86 5zm69 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zM37 85c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm182 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm-81 25c-26 0-56 11-74 29-19 19-28 43-22 67 6 23 27 41 53 43 11 1 22 0 33-3 21-6 40-18 57-35s29-36 35-57c3-11 4-22 3-33-2-26-20-47-43-53-5-1-10-2-15-2-9 0-18 2-27 6z"/>
+          </svg>
+        </div>
+        <div class="about-paw about-paw-3">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M86 5c-17 0-31 17-31 38s14 38 31 38 31-17 31-38S103 5 86 5zm69 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zM37 85c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm182 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm-81 25c-26 0-56 11-74 29-19 19-28 43-22 67 6 23 27 41 53 43 11 1 22 0 33-3 21-6 40-18 57-35s29-36 35-57c3-11 4-22 3-33-2-26-20-47-43-53-5-1-10-2-15-2-9 0-18 2-27 6z"/>
+          </svg>
+        </div>
+        <div class="about-paw about-paw-4">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M86 5c-17 0-31 17-31 38s14 38 31 38 31-17 31-38S103 5 86 5zm69 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zM37 85c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm182 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm-81 25c-26 0-56 11-74 29-19 19-28 43-22 67 6 23 27 41 53 43 11 1 22 0 33-3 21-6 40-18 57-35s29-36 35-57c3-11 4-22 3-33-2-26-20-47-43-53-5-1-10-2-15-2-9 0-18 2-27 6z"/>
+          </svg>
+        </div>
+        <div class="about-paw about-paw-5">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M86 5c-17 0-31 17-31 38s14 38 31 38 31-17 31-38S103 5 86 5zm69 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zM37 85c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm182 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm-81 25c-26 0-56 11-74 29-19 19-28 43-22 67 6 23 27 41 53 43 11 1 22 0 33-3 21-6 40-18 57-35s29-36 35-57c3-11 4-22 3-33-2-26-20-47-43-53-5-1-10-2-15-2-9 0-18 2-27 6z"/>
+          </svg>
+        </div>
+        <div class="about-paw about-paw-6">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M86 5c-17 0-31 17-31 38s14 38 31 38 31-17 31-38S103 5 86 5zm69 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zM37 85c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm182 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm-81 25c-26 0-56 11-74 29-19 19-28 43-22 67 6 23 27 41 53 43 11 1 22 0 33-3 21-6 40-18 57-35s29-36 35-57c3-11 4-22 3-33-2-26-20-47-43-53-5-1-10-2-15-2-9 0-18 2-27 6z"/>
+          </svg>
+        </div>
+        <div class="about-paw about-paw-7">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M86 5c-17 0-31 17-31 38s14 38 31 38 31-17 31-38S103 5 86 5zm69 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zM37 85c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm182 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm-81 25c-26 0-56 11-74 29-19 19-28 43-22 67 6 23 27 41 53 43 11 1 22 0 33-3 21-6 40-18 57-35s29-36 35-57c3-11 4-22 3-33-2-26-20-47-43-53-5-1-10-2-15-2-9 0-18 2-27 6z"/>
+          </svg>
+        </div>
+        <div class="about-paw about-paw-8">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M86 5c-17 0-31 17-31 38s14 38 31 38 31-17 31-38S103 5 86 5zm69 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zM37 85c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm182 0c-17 0-31 17-31 38s14 38 31 38 31-17 31-38-14-38-31-38zm-81 25c-26 0-56 11-74 29-19 19-28 43-22 67 6 23 27 41 53 43 11 1 22 0 33-3 21-6 40-18 57-35s29-36 35-57c3-11 4-22 3-33-2-26-20-47-43-53-5-1-10-2-15-2-9 0-18 2-27 6z"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="about-hero-content">
+          <div class="about-badge">
+            <img src="brandLogo.png" alt="PetRecs Logo" class="about-hero-logo">
+          </div>
+          <h1>About Us</h1>
+          <p class="about-hero-tagline">Leading the digital transformation of pet healthcare through innovative technology that connects clinics and pet parents seamlessly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="about-mission">
+      <div class="container">
+        <div class="about-mission-content">
+          <span class="section-label">Our Mission</span>
+          <h2>Empowering Pet Healthcare Through Technology</h2>
+          <p class="about-mission-text">
+            At PetRecs, we believe that exceptional pet healthcare begins with seamless communication and efficient practice management. Our mission is to empower veterinary clinics and pet parents with innovative technology that simplifies care coordination, strengthens relationships, and ultimately improves outcomes for pets.
+          </p>
+          <p class="about-mission-text">
+            We're committed to transforming the pet healthcare industry by providing a comprehensive, dual-platform solution that addresses the unique challenges faced by both veterinary professionals and pet owners in today's digital age.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dual Platform Section -->
+    <section class="about-platform">
+      <div class="container">
+        <span class="section-label" style="display: block; text-align: center;">Dual-Platform Solution</span>
+        <h2>One Ecosystem, Two Powerful Platforms</h2>
+        
+        <div class="platform-grid">
+          <div class="platform-card">
+            <div class="platform-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19Z" fill="currentColor"/>
+                <path d="M7 12H9V17H7V12ZM11 7H13V17H11V7ZM15 14H17V17H15V14Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>For Veterinary Clinics</h3>
+            <p>Comprehensive practice management software designed specifically for the unique needs of veterinary professionals.</p>
+            <ul class="platform-features">
+              <li>Digital appointment scheduling and calendar management</li>
+              <li>Electronic health records (EHR) with medical history tracking</li>
+              <li>Automated reminders for vaccines and checkups</li>
+              <li>Inventory and prescription management</li>
+              <li>Billing and invoicing integration</li>
+              <li>Staff collaboration and workflow tools</li>
+              <li>Analytics and reporting dashboard</li>
+              <li>HIPAA-compliant data security</li>
+            </ul>
+          </div>
+
+          <div class="platform-card">
+            <div class="platform-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>For Pet Parents</h3>
+            <p>User-friendly mobile and web app that keeps pet owners connected, informed, and engaged with their pet's healthcare.</p>
+            <ul class="platform-features">
+              <li>Easy appointment booking and rescheduling</li>
+              <li>Access to complete pet health records anytime</li>
+              <li>Automatic vaccination and appointment reminders</li>
+              <li>Direct messaging with veterinary team</li>
+              <li>Prescription refill requests</li>
+              <li>Educational resources and pet care tips</li>
+              <li>Multiple pet profile management</li>
+              <li>Secure payment and billing access</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology & Security Section -->
+    <section class="about-technology">
+      <div class="container">
+        <span class="section-label" style="display: block; text-align: center;">Technology & Security</span>
+        <h2>Enterprise-Grade Technology You Can Trust</h2>
+        
+        <div class="tech-grid">
+          <div class="tech-item">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 11.99H19C18.47 16.11 15.72 19.78 12 20.93V12H5V6.3L12 3.19V11.99Z" fill="currentColor"/>
+              </svg>
+              HIPAA Compliant
+            </h3>
+            <p>Full compliance with healthcare data protection regulations. Your clinic's and clients' sensitive information is encrypted and secure.</p>
+          </div>
+
+          <div class="tech-item">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/>
+              </svg>
+              99.9% Uptime
+            </h3>
+            <p>Industry-leading reliability with enterprise-grade infrastructure. Your practice never stops, and neither do we.</p>
+          </div>
+
+          <div class="tech-item">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.43 12.98C19.47 12.66 19.5 12.34 19.5 12C19.5 11.66 19.47 11.34 19.43 11.02L21.54 9.37C21.73 9.22 21.78 8.95 21.66 8.73L19.66 5.27C19.54 5.05 19.27 4.97 19.05 5.05L16.56 6.05C16.04 5.65 15.48 5.32 14.87 5.07L14.49 2.42C14.46 2.18 14.25 2 14 2H10C9.75 2 9.54 2.18 9.51 2.42L9.13 5.07C8.52 5.32 7.96 5.66 7.44 6.05L4.95 5.05C4.72 4.96 4.46 5.05 4.34 5.27L2.34 8.73C2.21 8.95 2.27 9.22 2.46 9.37L4.57 11.02C4.53 11.34 4.5 11.67 4.5 12C4.5 12.33 4.53 12.66 4.57 12.98L2.46 14.63C2.27 14.78 2.22 15.05 2.34 15.27L4.34 18.73C4.46 18.95 4.73 19.03 4.95 18.95L7.44 17.95C7.96 18.35 8.52 18.68 9.13 18.93L9.51 21.58C9.54 21.82 9.75 22 10 22H14C14.25 22 14.46 21.82 14.49 21.58L14.87 18.93C15.48 18.68 16.04 18.34 16.56 17.95L19.05 18.95C19.28 19.04 19.54 18.95 19.66 18.73L21.66 15.27C21.78 15.05 21.73 14.78 21.54 14.63L19.43 12.98ZM12 15.5C10.07 15.5 8.5 13.93 8.5 12C8.5 10.07 10.07 8.5 12 8.5C13.93 8.5 15.5 10.07 15.5 12C15.5 13.93 13.93 15.5 12 15.5Z" fill="currentColor"/>
+              </svg>
+              Cloud-Based
+            </h3>
+            <p>Access your data anywhere, anytime. Automatic backups and seamless updates with zero downtime.</p>
+          </div>
+
+          <div class="tech-item">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 1.01L7 1C5.9 1 5 1.9 5 3V21C5 22.1 5.9 23 7 23H17C18.1 23 19 22.1 19 21V3C19 1.9 18.1 1.01 17 1.01ZM17 19H7V5H17V19Z" fill="currentColor"/>
+              </svg>
+              Mobile-First
+            </h3>
+            <p>Beautiful, responsive design that works flawlessly on desktop, tablet, and mobile devices.</p>
+          </div>
+
+          <div class="tech-item">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.44 4 16.08 4 12C4 11.38 4.08 10.79 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.2 15.97 17.9 17.39Z" fill="currentColor"/>
+              </svg>
+              API Integration
+            </h3>
+            <p>Seamlessly integrates with your existing practice management tools and third-party services.</p>
+          </div>
+
+          <div class="tech-item">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H6L4 18V4H20V16Z" fill="currentColor"/>
+              </svg>
+              24/7 Support
+            </h3>
+            <p>Dedicated customer success team available around the clock to ensure your practice runs smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta">
+      <div class="container">
+        <div class="about-cta-content">
+          <h2>Ready to Transform Your Practice?</h2>
+          <div class="about-cta-buttons">
+            <a href="index.html#contact" class="btn-cta-secondary">
+              Schedule Free Demo
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: #1e3a52; color: rgba(255,255,255,0.8); padding: 48px 0 24px; text-align: center;">
+    <div class="container">
+      <p style="margin: 0 0 16px 0; font-size: 0.938rem;">© 2025 PetRecs. All rights reserved.</p>
+      <p style="margin: 0; font-size: 0.875rem; opacity: 0.7;">Transforming pet healthcare through technology</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
