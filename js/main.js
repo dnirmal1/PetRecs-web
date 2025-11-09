@@ -124,19 +124,20 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.style.opacity = '0.6';
 
       try {
+        // Send to local Express server
         const res = await fetch('/send-email', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name, email, phone, message })
         });
         const data = await res.json().catch(() => ({}));
-        if (res.ok && data.ok) {
+        if (res.ok) {
           msg.style.color = '#0bb06b';
           msg.textContent = 'Thank you — we received your message.';
           form.reset();
         } else {
           msg.style.color = '#d9534f';
-          msg.textContent = data?.error || 'Unable to send message. Try again later.';
+          msg.textContent = data.error || 'Unable to send message. Try again later.';
         }
       } catch (err) {
         console.error('contact send error', err);
